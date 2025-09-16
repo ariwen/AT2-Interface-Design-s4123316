@@ -6,20 +6,28 @@ const now = Tone.now();
 
 let position = 50;
 let direction = 1;
-let acceleration = 0.1;
+let speed = 5;
 const bottom = 550; 
+
+function soundBounce() {
+     synth.triggerAttackRelease("C4", "8n");
+}
 
 
 
 line1.addEventListener("click", function animate () {
-    position += direction *5
-    direction -= acceleration;
+    position += direction *speed; 
     line1.style.top = position + 'px';
-    if (position => 50) {
+    if (position <= 50) {
         direction = 1;
-    if (position >= bottom) {
-        direction = -1; 
+    
     }
+
+    if (position >= bottom) {
+        position = bottom;
+        direction = -1; 
+        soundBounce();
+    } 
     
     requestAnimationFrame(animate);
 }); 
@@ -28,9 +36,5 @@ line1.addEventListener("click", function animate () {
 
 
 
-line1.addEventListener("click", async () => {
-    await Tone.start();
-    console.log("started");
-    synth.triggerAttackRelease("C4", "8n", now + 4);
-})
+
 
