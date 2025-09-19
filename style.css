@@ -2,7 +2,6 @@ body {
     background-color: #e0d3af;
     background-image: url(../background.png);  
     background-size: cover;
-    text-align: center;
 }
 
 #Note-C-First {
@@ -12,5 +11,11 @@ body {
     cursor: grab;
     left: 46%;
     color: #4b371c; 
+}
+
+#test {
+    transform: rotate(90deg); 
+    left: 1270px; 
+    position: absolute; 
 }
 
