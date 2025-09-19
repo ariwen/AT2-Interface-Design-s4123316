@@ -1,3 +1,5 @@
+// I'd like to note here that I have not included the Math.Random() function as that will be part of the add poem button
+
 const line1 = document.getElementById("Note-C-First");
 
 const synth = new Tone.Synth().toDestination();

@@ -2,6 +2,7 @@ body {
     background-color: #e0d3af;
     background-image: url(../background.png);  
     background-size: cover;
+    /* the background image was sourced from https://au.pinterest.com/pin/82894449388024064/ but will be changed for the final UI (I did also edit the image on Adobe Illustrator)*/
 }
 
 #Note-C-First {
